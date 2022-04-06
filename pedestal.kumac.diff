@@ -1,0 +1,56 @@
+85c85
+<    do j=5,8
+---
+>    do j=5,12
+140c140
+<    do i=5,8
+---
+>    do i=5,12
+188c188
+<    vec/crea rmscn_calo(64,4) r
+---
+>    vec/crea rmscn_calo(64,8) r
+230c230
+<    do i=5,8
+---
+>    do i=5,12
+250,252c250,252
+<    vec/crea pede_maroc(64,4) r
+<    vec/crea rms_maroc(64,4) r
+<    vec/crea rms_anam(64,4) r
+---
+>    vec/crea pede_maroc(64,8) r
+>    vec/crea rms_maroc(64,8) r
+>    vec/crea rms_anam(64,8) r
+269,273c269,277
+<    vec/wri ch_calo,pede_maroc(1:64,1),rms_maroc(1:64,1),rmscn_calo(1:64,1) 'ana_pede/pede'//[1]//'.dat' '4(e12.7,2x)' ' '
+<    vec/wri ch_calo,pede_maroc(1:64,2),rms_maroc(1:64,2),rmscn_calo(1:64,2) 'ana_pede/pede'//[1]//'.dat' '4(e12.7,2x)' ' '
+<    vec/wri ch_calo,pede_maroc(1:64,3),rms_maroc(1:64,3),rmscn_calo(1:64,3) 'ana_pede/pede'//[1]//'.dat' '4(e12.7,2x)' ' '
+<    vec/wri ch_calo,pede_maroc(1:64,4),rms_maroc(1:64,4),rmscn_calo(1:64,4) 'ana_pede/pede'//[1]//'.dat' '4(e12.7,2x)' 'C'
+<     
+---
+>     vec/wri pede_maroc(1:64,1),rms_maroc(1:64,1),rmscn_calo(1:64,1) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,2),rms_maroc(1:64,2),rmscn_calo(1:64,2) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,3),rms_maroc(1:64,3),rmscn_calo(1:64,3) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,4),rms_maroc(1:64,4),rmscn_calo(1:64,4) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,5),rms_maroc(1:64,5),rmscn_calo(1:64,5) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,6),rms_maroc(1:64,6),rmscn_calo(1:64,6) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,7),rms_maroc(1:64,7),rmscn_calo(1:64,7) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>     vec/wri pede_maroc(1:64,8),rms_maroc(1:64,7),rmscn_calo(1:64,8) 'pedestal/pedestal.current' '3(e12.7,2x)' 'C'
+>      
+280c284,288
+<      vec/wri pede_maroc(1:64,4),rms_maroc(1:64,4),rmscn_calo(1:64,4) 'pedestal/pedestal.current' '3(e12.7,2x)' 'C'
+---
+>      vec/wri pede_maroc(1:64,4),rms_maroc(1:64,4),rmscn_calo(1:64,4) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>      vec/wri pede_maroc(1:64,5),rms_maroc(1:64,5),rmscn_calo(1:64,5) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>      vec/wri pede_maroc(1:64,6),rms_maroc(1:64,6),rmscn_calo(1:64,6) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>      vec/wri pede_maroc(1:64,7),rms_maroc(1:64,7),rmscn_calo(1:64,7) 'pedestal/pedestal.current' '3(e12.7,2x)' ' '
+>      vec/wri pede_maroc(1:64,8),rms_maroc(1:64,8),rmscn_calo(1:64,8) 'pedestal/pedestal.current' '3(e12.7,2x)' 'C'
+324a333,339
+>      k=8004+[i]
+>      hi/pl [k]
+>      k = 8104+[i]
+>      set hcol 2; hi/pl [k] s; set hcol 1
+>    enddo
+>    wait
+>    do i=5,8
